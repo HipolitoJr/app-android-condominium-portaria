@@ -22,34 +22,60 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="center"
-            android:src="@drawable/logo_condomais_final3"
-            android:layout_weight="1"/>
+            android:src="@drawable/logo_condomais_final"
+            android:layout_weight="1" />
 
-        <EditText
-            style="@style/editText_style"
-            android:id="@+id/editUsernameLogin"
-            android:inputType="textShortMessage"
-            android:hint="@string/digite_seu_usuario"
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <EditText
-            style="@style/editText_style"
-            android:id="@+id/editPasswordLogin"
-            android:inputType="textPassword"
-            android:hint="@string/digite_sua_senha"
-            />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"/>
 
-        <Button
-            style="@style/button_style"
-            android:id="@+id/btnEntrarLogin"
-            android:text="@string/entrar"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <EditText
+                    style="@style/editText_style"
+                    android:id="@+id/editUsernameLogin"
+                    android:inputType="textShortMessage"
+                    android:hint="@string/digite_seu_usuario"/>
+                <EditText
+                    style="@style/editText_style"
+                    android:id="@+id/editPasswordLogin"
+                    android:inputType="textPassword"
+                    android:hint="@string/digite_seu_usuario"
+                    />
+
+                <Button
+                    style="@style/button_style"
+                    android:id="@+id/btnEntrarLogin"
+                    android:text="@string/entrar"/>
 
 
-        <TextView
-            style="@style/textView_style"
-            android:id="@+id/tv_forgotpassword"
-            android:textColor="#FDFDFE"
-            android:text="@string/esqueci_minha_senha"/>
+                <TextView
+                    style="@style/textView_style"
+                    android:id="@+id/tv_forgotpassword"
+                    android:textColor="#FDFDFE"
+                    android:text="@string/esqueci_minha_senha"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"/>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
