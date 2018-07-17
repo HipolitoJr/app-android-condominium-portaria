@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/background_style"
-    tools:context=".LoginActivity">
+    tools:context=".app.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,6 +47,7 @@
                     android:id="@+id/editUsernameLogin"
                     android:inputType="textShortMessage"
                     android:hint="@string/digite_seu_usuario"/>
+
                 <EditText
                     style="@style/editText_style"
                     android:id="@+id/editPasswordLogin"

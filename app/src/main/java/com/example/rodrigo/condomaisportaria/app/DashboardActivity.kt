@@ -1,6 +1,5 @@
-package com.example.rodrigo.condomaisportaria
+package com.example.rodrigo.condomaisportaria.app
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -9,21 +8,23 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.app_bar_home.*
+import com.example.rodrigo.condomaisportaria.R
+import com.example.rodrigo.condomaisportaria.R.id.toolbar
+import kotlinx.android.synthetic.main.activity_dashboard.*
+import kotlinx.android.synthetic.main.app_bar_dashboard.*
 
 class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_dashboard)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+//        fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show()
+//        }
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
