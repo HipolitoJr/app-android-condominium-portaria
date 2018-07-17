@@ -11,6 +11,7 @@
     android:background="#fcfcfc"
     android:gravity="center"
     android:id="@+id/ll">
+
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"
@@ -90,7 +91,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check your bank activities"
+                    android:text="Visulize os avisos fixados"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
