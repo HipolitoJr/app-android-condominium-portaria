@@ -16,28 +16,43 @@
             android:label="Dashboard"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".app.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".app.EntradaActivity"
+        <activity
+            android:name=".app.EntradaActivity"
             android:parentActivityName=".app.DashboardActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme"/>
 
-        </activity>
+        <activity android:name=".app.OcorrenciaActivity"
+            android:parentActivityName=".app.DashboardActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".app.AvisoActivity"
+            android:parentActivityName=".app.DashboardActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".app.VisitanteActivity"
+            android:parentActivityName=".app.DashboardActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

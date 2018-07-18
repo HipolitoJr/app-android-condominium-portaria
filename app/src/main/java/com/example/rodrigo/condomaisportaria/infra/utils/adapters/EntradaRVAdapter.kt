@@ -56,7 +56,7 @@ class EntradaRVAdapter (
 
         holder.txtDescricao.text = entrada.descricao
         holder.txtDataHora.text = entrada.data.toString()
-        holder.txtNomeInformante.text = entrada.informante.toString()
+        holder.txtNomeInformante.text = entrada.informante.nome
         holder.txtStatus.text = "Status: "+entrada.status
 
         holder.btnConfirmarEntrada.setOnClickListener{view ->

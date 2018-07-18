@@ -8,7 +8,7 @@ class Entrada(
         var descricao : String,
         var status : String,
         var data : String,
-        var informante : Long = 0
+        var informante : Perfil
                ) {
 
     var id:Long = 0

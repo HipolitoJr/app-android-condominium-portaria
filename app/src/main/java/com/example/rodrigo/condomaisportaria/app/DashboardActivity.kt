@@ -17,6 +17,7 @@ import com.example.rodrigo.condomaisportaria.R.id.toolbar
 import kotlinx.android.synthetic.main.activity_dashboard.*
 import kotlinx.android.synthetic.main.app_bar_dashboard.*
 import kotlinx.android.synthetic.main.content_dashboard.*
+import java.util.*
 
 class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
 
@@ -69,9 +70,21 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             startActivity(intent)
         }
 
-        cardOcorrencias.setOnClickListener{ view ->
-            //Todo iniciar intent
+        cardOcorrencias.setOnClickListener { view ->
+            val intent = Intent(this@DashboardActivity, OcorrenciaActivity::class.java)
+            startActivity(intent)
         }
+
+        cardAviso.setOnClickListener { view ->
+            val intent = Intent(this@DashboardActivity, AvisoActivity::class.java)
+            startActivity(intent)
+        }
+
+        cardVisitante.setOnClickListener { vew ->
+            val intent = Intent(this@DashboardActivity, VisitanteActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 
