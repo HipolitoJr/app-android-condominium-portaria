@@ -29,30 +29,15 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/txtNomeInformanteItemEntrada"
+                    android:id="@+id/txtNomeInformanteIteAviso"
                     android:textColor="@android:color/black"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rodrigo Souza"/>
+                    />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/txtDataHoraItemEntrada"
-                    android:textColor="@android:color/black"
-                    android:gravity="end"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="12/08/2018"/>
-
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -64,28 +49,20 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/txtStatusItemEntrada"
+                android:id="@+id/txtPrioridadeItemAviso"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:textColor="@android:color/black"/>
 
             <TextView
-                android:id="@+id/txtDescricaoItemEntrada"
+                android:id="@+id/txtDescricaoItemAviso"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:gravity="left"
                 android:layout_weight="2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/btnConfirmaEntrada"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Confirmar entrada"
-                />
 
         </LinearLayout>
 
