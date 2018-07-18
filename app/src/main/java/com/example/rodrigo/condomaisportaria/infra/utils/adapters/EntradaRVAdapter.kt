@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import com.example.rodrigo.condomaisportaria.R
 import com.example.rodrigo.condomaisportaria.models.Entrada
@@ -24,12 +25,14 @@ class EntradaRVAdapter (
         var txtDataHora: TextView
         var txtDescricao: TextView
         var txtStatus: TextView
+        var btnConfirmarEntrada : Button
 
         init {
             txtNomeInformante = itemView.findViewById(R.id.txtNomeInformanteItemEntrada)
             txtDataHora = itemView.findViewById(R.id.txtDataHoraItemEntrada)
             txtDescricao = itemView.findViewById(R.id.txtDescricaoItemEntrada)
             txtStatus = itemView.findViewById(R.id.txtStatusItemEntrada)
+            btnConfirmarEntrada = itemView.findViewById(R.id.btnConfirmaEntrada)
         }
 
     }
@@ -53,8 +56,14 @@ class EntradaRVAdapter (
 
         holder.txtDescricao.text = entrada.descricao
         holder.txtDataHora.text = entrada.data.toString()
-        holder.txtNomeInformante.text = entrada.informante.usuario.username
-        holder.txtStatus.text = entrada.status
+        holder.txtNomeInformante.text = entrada.informante.toString()
+        holder.txtStatus.text = "Status: "+entrada.status
+
+        holder.btnConfirmarEntrada.setOnClickListener{view ->
+                entrada.validarEntrada()
+        }
+
+
     }
 
 
