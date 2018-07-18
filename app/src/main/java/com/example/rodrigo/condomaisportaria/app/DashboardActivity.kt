@@ -1,5 +1,7 @@
 package com.example.rodrigo.condomaisportaria.app
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -8,23 +10,26 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
 import com.example.rodrigo.condomaisportaria.R
 import com.example.rodrigo.condomaisportaria.R.id.toolbar
 import kotlinx.android.synthetic.main.activity_dashboard.*
 import kotlinx.android.synthetic.main.app_bar_dashboard.*
+import kotlinx.android.synthetic.main.content_dashboard.*
+import java.util.*
 
-class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
+class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
         setSupportActionBar(toolbar)
 
-//        fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                    .setAction("Action", null).show()
-//        }
+        initComponets()
+    }
+
+    fun initComponets(){
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -32,7 +37,7 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
-
+        menuDashboard()
     }
 
     override fun onBackPressed() {
@@ -57,6 +62,30 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.action_settings -> return true
             else -> return super.onOptionsItemSelected(item)
         }
+    }
+
+    fun menuDashboard(){
+        cardEntradas.setOnClickListener { view ->
+            val intent = Intent(this@DashboardActivity, EntradaActivity::class.java)
+            startActivity(intent)
+        }
+
+        cardOcorrencias.setOnClickListener { view ->
+            val intent = Intent(this@DashboardActivity, OcorrenciaActivity::class.java)
+            startActivity(intent)
+        }
+
+        cardAviso.setOnClickListener { view ->
+            val intent = Intent(this@DashboardActivity, AvisoActivity::class.java)
+            startActivity(intent)
+        }
+
+        cardVisitante.setOnClickListener { vew ->
+            val intent = Intent(this@DashboardActivity, VisitanteActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -85,4 +114,5 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
+
 }

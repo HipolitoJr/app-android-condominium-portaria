@@ -101,7 +101,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/card01"
+            android:id="@+id/cardAviso"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -141,7 +141,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/card02"
+            android:id="@+id/cardVisitante"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">

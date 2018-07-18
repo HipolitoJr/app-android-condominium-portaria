@@ -30,13 +30,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun initComponents() {
-        apiService = APIService("")
         securityPreferences = SecurityPreferences(this)
+        apiService = APIService("")
         progressDialog = initProgressDialog()
 
-//        if(estaLogado()){
-//            initProxActivity()
-//        }
+        if(estaLogado()){
+            initProxActivity()
+        }
 
         btnEntrarLogin.setOnClickListener {
             progressDialog.show()
@@ -69,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
         val username = editUsernameLogin.text.toString()
         val password = editPasswordLogin.text.toString()
 
-        val usuario = Usuario(password, username)
+        val usuario = Usuario(password ,username)
         return usuario
     }
 
@@ -96,4 +96,5 @@ class LoginActivity : AppCompatActivity() {
         progressDialog.setMessage("Aguarde...")
         return progressDialog
     }
+
 }
