@@ -1,5 +1,6 @@
 package com.example.vinicius.condominium.infra.api
 
+import com.example.rodrigo.condomaisportaria.infra.utils.endpoints.EntradaEndPoint
 import com.example.vinicius.condominium.infra.api.endpoints.LoginEndPoint
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -13,6 +14,7 @@ public class APIService{
     private lateinit var interceptorAPI: InterceptorAPI
 
     lateinit var loginEndPoint: LoginEndPoint
+    lateinit var entradaEndPoint: EntradaEndPoint
 
     constructor(Token: String){
 
@@ -30,6 +32,7 @@ public class APIService{
                 .build()
 
         loginEndPoint = this.retrofit.create(LoginEndPoint::class.java)
+        entradaEndPoint = this.retrofit.create(EntradaEndPoint::class.java)
 
     }
 }
