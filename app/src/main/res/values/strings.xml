@@ -10,4 +10,8 @@
     <string name="digite_seu_usuario">Digite seu usuário</string>
     <string name="entrar">ENTRAR</string>
     <string name="esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="adcionar_aviso">Adcionar aviso</string>
+    <string name="adicionar_ocorrencia">Adicionar ocorrencia</string>
+    <string name="confirmar_form">confirmar form</string>
+    <string name="cancelar_form">cancelar form</string>
 </resources>
