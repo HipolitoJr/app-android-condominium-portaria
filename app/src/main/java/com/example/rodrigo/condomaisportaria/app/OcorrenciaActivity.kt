@@ -3,6 +3,8 @@ package com.example.rodrigo.condomaisportaria.app
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import com.example.rodrigo.condomaisportaria.infra.utils.adapters.OcorrenciaRVAdapter
 import com.example.rodrigo.condomaisportaria.models.Ocorrencia
@@ -74,5 +76,18 @@ class OcorrenciaActivity : AppCompatActivity() {
 
     fun getToken(): String {
         return securityPreferences.getSavedString(CondomaisConstants.KEY.TOKEN_LOGADO)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.activity_add_ocorrencia, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when(item!!.itemId){
+            R.id.menu_add_ocorrencia ->
+                Toast.makeText(this,"Fui clicado", Toast.LENGTH_SHORT).show()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

@@ -1,8 +1,11 @@
 package com.example.rodrigo.condomaisportaria.app
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import com.example.rodrigo.condomaisportaria.R
 import com.example.rodrigo.condomaisportaria.infra.utils.adapters.AvisoRVAdapter
@@ -72,8 +75,27 @@ class AvisoActivity : AppCompatActivity() {
 
     }
 
-
     fun getToken(): String {
         return securityPreferences.getSavedString(CondomaisConstants.KEY.TOKEN_LOGADO)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.activity_add_aviso, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+            lateinit var intent: Intent
+            when(item!!.itemId){
+                R.id.menu_add_aviso ->
+                    iniciarProximaActivity()
+            }
+
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun iniciarProximaActivity() {
+        intent = Intent(this@AvisoActivity, AdicionarAvisoActivity::class.java)
+        startActivity(intent)
     }
 }
