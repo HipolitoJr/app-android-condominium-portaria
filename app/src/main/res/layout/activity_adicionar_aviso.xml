@@ -19,7 +19,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinnerPrioridadeAdicionarAviso"
         android:prompt="@string/prioridade_prompt"
-        android:entries="@array/prioriadade_aviso"
         />
 
 </LinearLayout>
