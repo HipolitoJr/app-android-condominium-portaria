@@ -17,6 +17,8 @@
     <string name="descricao">Descrição</string>
 
     <string name="prioridade_prompt">Prioridade</string>
+    <string name="localizacao">localização</string>
+    <string name="publico">Público:</string>
 
     <string-array name="prioriadade_aviso">
         <item>Prioridade</item>

@@ -9,6 +9,6 @@ class Perfil (
         var nome: String,
         var portaria : String
 ) {
-
+     var id : Long = 0
 
 }

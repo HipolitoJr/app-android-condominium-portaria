@@ -85,7 +85,6 @@ class AvisoActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-            lateinit var intent: Intent
             when(item!!.itemId){
                 R.id.menu_add_aviso ->
                     iniciarProximaActivity()
