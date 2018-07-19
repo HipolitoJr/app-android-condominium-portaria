@@ -1,5 +1,6 @@
 package com.example.rodrigo.condomaisportaria.app
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -86,8 +87,13 @@ class OcorrenciaActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item!!.itemId){
             R.id.menu_add_ocorrencia ->
-                Toast.makeText(this,"Fui clicado", Toast.LENGTH_SHORT).show()
+                iniciarProximaActivity()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun iniciarProximaActivity() {
+        intent = Intent(this@OcorrenciaActivity, AdicionarOcorrenciaActivity::class.java)
+        startActivity(intent)
     }
 }
