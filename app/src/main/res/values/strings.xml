@@ -14,4 +14,14 @@
     <string name="adicionar_ocorrencia">Adicionar ocorrencia</string>
     <string name="confirmar_form">confirmar form</string>
     <string name="cancelar_form">cancelar form</string>
+    <string name="descricao">Descrição</string>
+
+    <string name="prioridade_prompt">Prioridade</string>
+
+    <string-array name="prioriadade_aviso">
+        <item>Prioridade</item>
+        <item>Baixa</item>
+        <item>Razoavel</item>
+        <item>Urgente</item>
+    </string-array>
 </resources>

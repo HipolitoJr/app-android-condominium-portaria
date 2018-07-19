@@ -37,20 +37,25 @@
             android:name=".app.EntradaActivity"
             android:parentActivityName=".app.DashboardActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme"/>
-
-        <activity android:name=".app.OcorrenciaActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".app.OcorrenciaActivity"
             android:parentActivityName=".app.DashboardActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme"/>
-
-        <activity android:name=".app.AvisoActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".app.AvisoActivity"
             android:parentActivityName=".app.DashboardActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme"/>
-
-        <activity android:name=".app.VisitanteActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".app.VisitanteActivity"
             android:parentActivityName=".app.DashboardActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".app.AdicionarAvisoActivity"
+            android:parentActivityName=".app.AvisoActivity"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme"/>
     </application>

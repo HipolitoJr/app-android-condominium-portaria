@@ -1,5 +1,6 @@
 package com.example.rodrigo.condomaisportaria.app
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -84,11 +85,17 @@ class AvisoActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+            lateinit var intent: Intent
             when(item!!.itemId){
                 R.id.menu_add_aviso ->
-                    Toast.makeText(this,"Fui clicado", Toast.LENGTH_SHORT).show()
+                    iniciarProximaActivity()
             }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun iniciarProximaActivity() {
+        intent = Intent(this@AvisoActivity, AdicionarAvisoActivity::class.java)
+        startActivity(intent)
     }
 }
