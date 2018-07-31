@@ -74,14 +74,14 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgroundgray"
-                    android:src="@drawable/ic_bell_24dp"
+                    android:src="@drawable/ic_ocorrencia_black_24dp"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Ideas"/>
+                    android:text="Ocorrências"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -91,7 +91,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Visulize os avisos fixados"
+                    android:text="Cadastre as ocorrências"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
@@ -114,14 +114,14 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgroundpink"
-                    android:src="@drawable/ic_off_24dp"
+                    android:src="@drawable/ic_bell_24dp"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Banking"/>
+                    android:text="Avisos"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -131,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check your bank activities"
+                    android:text="Adicione avisos aos condôminos"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
@@ -154,14 +154,14 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgroundgreen"
-                    android:src="@drawable/ic_off_white_24dp"
+                    android:src="@drawable/ic_visitantes_black_24dp"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Banking"/>
+                    android:text="Visitantes"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -171,7 +171,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check your bank activities"
+                    android:text="Visitantes com acesso permitido"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
@@ -189,7 +189,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/card03"
+            android:id="@+id/cardUnidadesHabitacionais"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -202,14 +202,14 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgrounddarkblue"
-                    android:src="@drawable/ic_off_white_24dp"
+                    android:src="@drawable/ic_home_white_24dp"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Add"/>
+                    android:text="Unidade Habitacionais"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -219,7 +219,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check your bank activities"
+                    android:text="Listagem de todas as unidades"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
@@ -229,7 +229,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/card04"
+            android:id="@+id/cardReserva"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -245,13 +245,13 @@
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgroundcoloroverlay"
                     android:padding="10dp"
-                    android:src="@drawable/ic_off_24dp"/>
+                    android:src="@drawable/ic_reserva_white_24dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Links"
+                    android:text="Reservas"
                     android:textStyle="bold" />
 
                 <View
@@ -265,7 +265,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="Check your bank activities"
+                    android:text="Verifique todas as reservas"
                     android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>
@@ -274,7 +274,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/card05"
+            android:id="@+id/cardMural"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -288,14 +288,14 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgroundyellon"
-                    android:src="@drawable/ic_off_24dp"
+                    android:src="@drawable/ic_contact_phone_white_24dp"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Banking"/>
+                    android:text="Mural"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -305,7 +305,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check your bank activities"
+                    android:text="Cadastre serviços úteis"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
@@ -315,7 +315,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/card06"
+            android:id="@+id/cardConfiguracoes"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -328,14 +328,14 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgroundred"
-                    android:src="@drawable/ic_off_24dp"
+                    android:src="@drawable/ic_settings_applications_black_24dp"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Banking"/>
+                    android:text="Configurações"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -345,7 +345,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check your bank activities"
+                    android:text="Configurações do Condomínio"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
