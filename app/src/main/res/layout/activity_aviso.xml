@@ -6,18 +6,54 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".app.AvisoActivity"
->
+android:orientation="vertical">
 
-<android.support.design.widget.CoordinatorLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvAviso"
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_weight="4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvAviso"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
 
-</android.support.design.widget.CoordinatorLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+
+            android:id="@+id/btnEditarAviso"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Editar"/>
+
+        <Button
+
+            android:id="@+id/btnRemoverAviso"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Remover"/>
+
+        <Button
+
+            android:id="@+id/btnAdcionarAviso"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Adicionar"/>
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
