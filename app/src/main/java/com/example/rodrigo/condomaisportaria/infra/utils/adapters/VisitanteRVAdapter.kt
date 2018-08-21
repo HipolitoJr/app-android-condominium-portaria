@@ -20,12 +20,10 @@ class VisitanteRVAdapter (
 
         var txtNomeVisitante : TextView
         var txtNomeMorador : TextView
-        var txtSexoVisitante : TextView
 
         init {
             txtNomeMorador = itemView.findViewById(R.id.txtNomeMoradorVisitante)
-            txtNomeVisitante = itemView.findViewById(R.id.txtNomeVisitante)
-            txtSexoVisitante = itemView.findViewById(R.id.txtSexoVisitante)
+            txtNomeVisitante = itemView.findViewById(R.id.txtNomeItemVisitante)
         }
 
     }
@@ -49,7 +47,6 @@ class VisitanteRVAdapter (
         var visitante = visitantes.get(position)
 
         holder.txtNomeVisitante.text = visitante.nome
-        holder.txtSexoVisitante.text = visitante.sexo
         holder.txtNomeMorador.text = visitante.morador.nome
     }
 

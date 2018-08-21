@@ -66,23 +66,27 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
     fun menuDashboard(){
         cardEntradas.setOnClickListener { view ->
-            val intent = Intent(this@DashboardActivity, EntradaActivity::class.java)
-            startActivity(intent)
+            val intent = Intent(this, EntradaActivity::class.java)
+            this.startActivityForResult(intent, 0)
+            this@DashboardActivity.overridePendingTransition(R.anim.lefttoright, R.anim.stable)
         }
 
         cardOcorrencias.setOnClickListener { view ->
-            val intent = Intent(this@DashboardActivity, OcorrenciaActivity::class.java)
-            startActivity(intent)
+            val intent = Intent(this, OcorrenciaActivity::class.java)
+            this.startActivityForResult(intent, 0)
+            this@DashboardActivity.overridePendingTransition(R.anim.lefttoright, R.anim.stable)
         }
 
         cardAviso.setOnClickListener { view ->
-            val intent = Intent(this@DashboardActivity, AvisoActivity::class.java)
-            startActivity(intent)
+            val intent = Intent(this, AvisoActivity::class.java)
+            this.startActivityForResult(intent, 0)
+            this@DashboardActivity.overridePendingTransition(R.anim.lefttoright, R.anim.stable)
         }
 
         cardVisitante.setOnClickListener { vew ->
-            val intent = Intent(this@DashboardActivity, VisitanteActivity::class.java)
-            startActivity(intent)
+            val intent = Intent(this, VisitanteActivity::class.java)
+            this.startActivityForResult(intent, 0)
+            this@DashboardActivity.overridePendingTransition(R.anim.lefttoright, R.anim.stable)
         }
 
 

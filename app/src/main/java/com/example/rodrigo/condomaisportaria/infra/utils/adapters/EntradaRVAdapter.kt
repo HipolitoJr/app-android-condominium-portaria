@@ -2,14 +2,18 @@ package com.example.rodrigo.condomaisportaria.infra.utils.adapters
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
+import android.support.v4.app.ActivityCompat.startActivityForResult
 import android.support.v7.view.menu.ActionMenuItemView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.rodrigo.condomaisportaria.R
+import com.example.rodrigo.condomaisportaria.app.EntradaExpandidaActivity
 import com.example.rodrigo.condomaisportaria.models.Entrada
 import kotlinx.android.synthetic.main.item_lista_entrada.view.*
 
@@ -21,18 +25,18 @@ class EntradaRVAdapter (
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var txtNomeInformante: TextView
-        var txtDataHora: TextView
-        var txtDescricao: TextView
-        var txtStatus: TextView
-        var btnConfirmarEntrada : Button
+        var txtRequerente: TextView
+        var txtData: TextView
+        var txtHora: TextView
+        var txtNomeVisitante: TextView
+        var btnConfirmarEntrada : ImageView
 
         init {
-            txtNomeInformante = itemView.findViewById(R.id.txtNomeInformanteItemEntrada)
-            txtDataHora = itemView.findViewById(R.id.txtDataHoraItemEntrada)
-            txtDescricao = itemView.findViewById(R.id.txtDescricaoItemEntrada)
-            txtStatus = itemView.findViewById(R.id.txtStatusItemEntrada)
-            btnConfirmarEntrada = itemView.findViewById(R.id.btnConfirmaEntrada)
+            txtRequerente = itemView.findViewById(R.id.txtRequerente)
+            txtData = itemView.findViewById(R.id.txtData)
+            txtHora = itemView.findViewById(R.id.txtHora)
+            txtNomeVisitante = itemView.findViewById(R.id.txtNomeVisitante)
+            btnConfirmarEntrada = itemView.findViewById(R.id.btnConfirmar)
         }
 
     }
@@ -54,16 +58,25 @@ class EntradaRVAdapter (
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var entrada = entradas.get(position)
 
-        holder.txtDescricao.text = entrada.descricao
-        holder.txtDataHora.text = entrada.data.toString()
-        holder.txtNomeInformante.text = entrada.informante.nome
-        holder.txtStatus.text = "Status: "+entrada.status
+        holder.itemView.setOnClickListener { view ->
+            onClick(entrada,view)
+        }
 
+        holder.txtRequerente.text = entrada.informante.nome+" "+entrada.informante.sobrenome
+        holder.txtData.text = entrada.data
+        holder.txtHora.text = entrada.hora
+        holder.txtNomeVisitante.text = entrada.descricao
         holder.btnConfirmarEntrada.setOnClickListener{view ->
                 entrada.validarEntrada()
         }
 
 
+    }
+
+    fun onClick(entrada: Entrada,view: View){
+        val intent = Intent(activity,EntradaExpandidaActivity::class.java)
+        activity.startActivityForResult(intent,0)
+        activity.overridePendingTransition(R.anim.lefttoright,R.anim.stable)
     }
 
 
