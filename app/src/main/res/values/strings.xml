@@ -20,6 +20,7 @@
     <string name="localizacao">localização</string>
     <string name="publico">Público:</string>
     <string name="filter">Filter</string>
+    <string name="adicionar_aviso">ADICIONAR AVISO</string>
 
     <string-array name="prioriadade_aviso">
         <item>Prioridade</item>

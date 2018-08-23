@@ -20,16 +20,21 @@ class OcorrenciaRVAdapter(
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-//        var txtNomeInformante : TextView
-//        var txtLocalizacao : TextView
-//        var txtStatus : TextView
-//        var txtDescricao : TextView
+        var txtNomeInformante : TextView
+        var txtLocalizacao : TextView
+        var txtStatus : TextView
+        var txtDescricao : TextView
+        var txtData: TextView
+        var txtHora: TextView
 
         init {
-//            txtNomeInformante = itemView.findViewById(R.id.txtNomeInformanteIteOcorrencia)
-//            txtLocalizacao = itemView.findViewById(R.id.txtLocalizacaoItemOcorrencia)
-//            txtStatus = itemView.findViewById(R.id.txtStatusItemOcorrencia)
-//            txtDescricao = itemView.findViewById(R.id.txtDescricaoItemOcorrencia)
+            txtNomeInformante = itemView.findViewById(R.id.txtItemInformanteOcorrencia)
+            txtLocalizacao = itemView.findViewById(R.id.txtItemLocalizacaoOcorrencia)
+            txtStatus = itemView.findViewById(R.id.txtItemStatusOcorrencia)
+            txtDescricao = itemView.findViewById(R.id.txtItemDescricaoOcorrencia)
+            txtData = itemView.findViewById(R.id.txtItemDataOcorrencia)
+            txtHora = itemView.findViewById(R.id.txtItemHoraOcorrencia)
+
 
         }
 
@@ -54,10 +59,10 @@ class OcorrenciaRVAdapter(
 
         var ocorrencia = ocorrencias.get(position)
 
-//        holder.txtDescricao.text = ocorrencia.descricao
-//        holder.txtStatus.text = ocorrencia.status
-//        holder.txtLocalizacao.text = ocorrencia.localizacao
-//        holder.txtNomeInformante.text = ocorrencia.informante.nome
+        holder.txtDescricao.text = ocorrencia.descricao
+        holder.txtStatus.text = ocorrencia.status
+        holder.txtLocalizacao.text = ocorrencia.localizacao
+        holder.txtNomeInformante.text = ocorrencia.informante.nome
     }
 
 
