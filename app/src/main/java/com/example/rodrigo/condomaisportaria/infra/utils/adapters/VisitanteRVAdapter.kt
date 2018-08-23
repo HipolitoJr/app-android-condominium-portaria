@@ -47,7 +47,10 @@ class VisitanteRVAdapter (
         var visitante = visitantes.get(position)
 
         holder.txtNomeVisitante.text = visitante.nome
-        holder.txtNomeMorador.text = visitante.morador.nome
+        holder.txtNomeMorador.text =
+                visitante.unidadeHabitacional.grupoHabitacional.tipo + " " +
+                visitante.unidadeHabitacional.grupoHabitacional.tipoUnidade + " " +
+                visitante.unidadeHabitacional.nome
     }
 
 
