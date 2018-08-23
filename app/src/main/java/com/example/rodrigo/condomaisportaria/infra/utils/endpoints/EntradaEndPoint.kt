@@ -1,5 +1,6 @@
 package com.example.rodrigo.condomaisportaria.infra.utils.endpoints
 
+import com.example.rodrigo.condomaisportaria.models.Detail
 import com.example.rodrigo.condomaisportaria.models.Entrada
 import com.example.vinicius.condominium.models.TokenAPIModel
 import com.example.vinicius.condominium.models.Usuario
@@ -17,4 +18,14 @@ interface EntradaEndPoint {
 
     @GET( "entradas/{entradaId}/")
     fun getEntradaAPI(@Path("entradaId") entradaID : Long) : Call<Entrada>
+
+    @GET( "entradas/{entradaId}/liberar/")
+    fun liberarEntradaAPI(@Path("entradaId") entradaID : Long) : Call<Detail>
+
+    @GET( "entradas/{entradaId}/finalizar/")
+    fun finalizarEntradaAPI(@Path("entradaId") entradaID : Long) : Call<Detail>
+
+    @GET( "entradas/{entradaId}/cancelar/")
+    fun cancelarEntradaAPI(@Path("entradaId") entradaID : Long) : Call<Detail>
+
 }
