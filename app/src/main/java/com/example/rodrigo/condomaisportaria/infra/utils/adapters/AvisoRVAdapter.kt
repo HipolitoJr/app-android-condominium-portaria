@@ -66,8 +66,9 @@ class AvisoRVAdapter(
         holder.txtNomeInformante.text = aviso.informante.nome
         holder.txtPrioridade.text = aviso.prioridade
 
-        holder.itemView!!.linearLayout.visibility = View.GONE
 
+        //COLLAPSE/EXPAND RV
+        holder.itemView!!.linearLayout.visibility = View.GONE
 
         if (currentPosition == position) {
             //creating an animation
@@ -81,13 +82,18 @@ class AvisoRVAdapter(
 
         holder.itemView.setOnClickListener { view ->
             currentPosition = position
-
             notifyDataSetChanged()
-
-
-
-
         }
+
+        if(holder.itemView.linearLayout.visibility == View.VISIBLE){
+            holder.itemView.txtDescricaoAviso.setOnClickListener { view->
+                holder.itemView.txtDescricaoAviso.visibility = View.GONE
+                holder.itemView.editEditarDescricao.visibility = View.VISIBLE
+                holder.itemView.editEditarDescricao.setText(holder.itemView.txtDescricaoAviso.text)
+            }
+        }
+        holder.itemView.txtDescricaoAviso.visibility = View.VISIBLE
+        holder.itemView.editEditarDescricao.visibility = View.GONE
     }
 
 
