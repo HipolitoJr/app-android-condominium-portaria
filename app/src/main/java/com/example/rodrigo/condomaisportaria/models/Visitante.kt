@@ -7,7 +7,8 @@ class Visitante(
         var nome : String,
         var sexo : String,
         var telefone : String,
-        var morador : Perfil,
+        @SerializedName("unidade_habitacional")
+        var  unidadeHabitacional: UnidadeHabitacional,
         @SerializedName("data_nascimento")
         var dataNascimento : String
 
