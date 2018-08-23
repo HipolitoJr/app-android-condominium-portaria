@@ -33,6 +33,7 @@ class EntradaRVAdapter (
         var btnConfirmarEntrada : Button
         var txtStatusEntrada: TextView
 
+
         init {
             txtRequerente = itemView.findViewById(R.id.txtRequerente)
             txtData = itemView.findViewById(R.id.txtData)
@@ -66,6 +67,7 @@ class EntradaRVAdapter (
         holder.txtData.text = entrada.data
         holder.txtHora.text = entrada.hora
         holder.txtNomeVisitante.text = entrada.descricao
+
         holder.btnConfirmarEntrada.setOnClickListener{view ->
                 entrada.validarEntrada()
         }
