@@ -14,4 +14,7 @@ interface EntradaEndPoint {
 
     @GET("entradas/")
     fun getEntradasAPI() : Call<MutableList<Entrada>>
+
+    @GET( "entradas/{entradaId}/")
+    fun getEntradaAPI(@Path("entradaId") entradaID : Long) : Call<Entrada>
 }

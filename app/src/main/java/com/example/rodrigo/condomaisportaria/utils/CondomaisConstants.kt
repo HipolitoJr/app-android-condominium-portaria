@@ -8,6 +8,7 @@ class CondomaisConstants private constructor(){
         val ID_USUARIO_LOGADO = "usuarioLogado"
         val STATUS_ENTRADA_INFORMADA = "informada"
         val STATUS_ENTRADA_ATENDIDA = "atendida"
+        val ENRADA_ID = "entradaId"
 
     }
 }
