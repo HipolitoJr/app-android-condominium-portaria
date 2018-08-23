@@ -117,6 +117,7 @@
                 android:background="@color/colorPrimary" />
 
             <TextView
+                android:id="@+id/txtBlocoAndApartamentoEntradaEx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -131,6 +132,7 @@
                 android:textColor="@color/draw_description"
                 android:textSize="25dp"/>
             <TextView
+                android:id="@+id/txtMoradoresEntradaEx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hipólito Ribeiro, Juliana Martins, Suyanne Cardoso"
