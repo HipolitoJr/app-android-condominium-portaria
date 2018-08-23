@@ -1,8 +1,10 @@
 package com.example.rodrigo.condomaisportaria.app
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.MenuItem
 import android.widget.Toast
 import com.example.rodrigo.condomaisportaria.R
 import com.example.rodrigo.condomaisportaria.infra.utils.adapters.EntradaRVAdapter
@@ -82,5 +84,20 @@ class EntradaActivity : AppCompatActivity() {
 
     private fun getToken(): String{
         return securityPreferences.getSavedString(CondomaisConstants.KEY.TOKEN_LOGADO)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when(item?.itemId){
+            android.R.id.home -> onBackPressed()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this,DashboardActivity::class.java)
+        startActivityForResult(intent,0)
+        this@EntradaActivity.overridePendingTransition(R.anim.righttoleft,R.anim.stable)
+        finish()
+        super.onBackPressed()
     }
 }

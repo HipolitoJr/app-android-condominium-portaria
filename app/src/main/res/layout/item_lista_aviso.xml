@@ -1,79 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/colorPrimary2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFFFFF">
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
 
     <LinearLayout
-        android:padding="8dp"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="6">
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_weight="1"
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/profImg"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content">
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/porteiro2"
+                app:riv_corner_radius="25dp"
+                app:riv_oval="true"
+                android:layout_weight="1"
+                />
 
-                <ImageView
-                    android:src="@drawable/ic_entrada_black_24dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/txtNomeInformanteIteAviso"
-                    android:textColor="@android:color/black"
-                    android:layout_gravity="center"
+                    android:id="@+id/txtNomeInformanteItemAviso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    />
+                    android:text="Vinícius Lopes"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="informa ao condomínio:"
+                    android:textColor="@color/draw_description"
+                    android:textSize="15sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Prioridade:"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="3dp"
+                    android:textColor="@color/draw_description"
+                    android:textAlignment="textEnd"/>
+
+                <TextView
+                    android:id="@+id/txtPrioridadeItemAviso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baixa"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@color/draw_description"
+                    android:textAlignment="textEnd"/>
+
 
             </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:gravity="center"
-            android:layout_margin="6dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
             <TextView
-                android:id="@+id/txtPrioridadeItemAviso"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:textColor="@android:color/black"/>
-
-            <TextView
-                android:id="@+id/txtDescricaoItemAviso"
-                android:textColor="@android:color/black"
+                android:id="@+id/txtDescricaoAviso"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="4dp"
+                android:text="No dia 23/08/2018, faltará energia nas torres A e B devido a manuntenção preventiva do circuito elétrico."
+                android:ellipsize="end"
+                android:minLines="3"
+                android:maxLines="3"
+                android:scrollHorizontally="true"
                 android:textSize="18sp"
-                android:gravity="left"
-                android:layout_weight="2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
+                android:textColor="@color/draw_description"/>
 
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:gravity="bottom|end"
-        android:background="@android:color/darker_gray"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="1dp">
-
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="RV EXPANDABLE"
+            android:textSize="30sp"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/colorSecondary"/>
 
 </LinearLayout>

@@ -5,19 +5,55 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".app.OcorrenciaActivity">
+tools:context=".app.OcorrenciaActivity"
+android:orientation="vertical">
 
-<android.support.design.widget.CoordinatorLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvOcorrencia"
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_weight="4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvOcorrencia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.design.widget.CoordinatorLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
 
-</android.support.design.widget.CoordinatorLayout>
+        <Button
+
+            android:id="@+id/btnEditarOcorrencia"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Editar"/>
+
+        <Button
+
+            android:id="@+id/btnRemoverOcorrencia"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Remover"/>
+
+        <Button
+
+            android:id="@+id/btnAdcionarOcorrencia"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Adicionar"/>
+
+    </LinearLayout>
 
 </LinearLayout>

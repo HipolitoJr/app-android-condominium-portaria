@@ -1,8 +1,11 @@
 package com.example.rodrigo.condomaisportaria.app
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import com.example.rodrigo.condomaisportaria.R
 import com.example.rodrigo.condomaisportaria.infra.utils.adapters.VisitanteRVAdapter
@@ -19,6 +22,7 @@ class VisitanteActivity : AppCompatActivity() {
 
     private lateinit var apiService: APIService
     private lateinit var securityPreferences: SecurityPreferences
+    private lateinit var menu: Menu
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,5 +74,25 @@ class VisitanteActivity : AppCompatActivity() {
 
     fun getToken(): String {
         return securityPreferences.getSavedString(CondomaisConstants.KEY.TOKEN_LOGADO)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        this.menu = menu
+        menuInflater.inflate(R.menu.menu_visitantes, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when(item?.itemId){
+            android.R.id.home -> onBackPressed()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this,DashboardActivity::class.java)
+        startActivityForResult(intent,0)
+        this@VisitanteActivity.overridePendingTransition(R.anim.righttoleft,R.anim.stable)
+        finish()
+        super.onBackPressed()
     }
 }

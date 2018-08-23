@@ -18,7 +18,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
 class OcorrenciaActivity : AppCompatActivity() {
 
     private lateinit var apiService: APIService
@@ -35,6 +34,7 @@ class OcorrenciaActivity : AppCompatActivity() {
     fun initComponents() {
         securityPreferences = SecurityPreferences(this)
         apiService = APIService(getToken())
+        btnAdcionarOcorrencia.setOnClickListener({v -> iniciarProximaActivity()})
         getOcorrencia()
     }
 
@@ -77,19 +77,6 @@ class OcorrenciaActivity : AppCompatActivity() {
 
     fun getToken(): String {
         return securityPreferences.getSavedString(CondomaisConstants.KEY.TOKEN_LOGADO)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.activity_add_ocorrencia, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when(item!!.itemId){
-            R.id.menu_add_ocorrencia ->
-                iniciarProximaActivity()
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     private fun iniciarProximaActivity() {

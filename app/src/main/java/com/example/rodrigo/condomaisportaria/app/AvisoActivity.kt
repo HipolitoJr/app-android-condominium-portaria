@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import com.example.rodrigo.condomaisportaria.R
 import com.example.rodrigo.condomaisportaria.infra.utils.adapters.AvisoRVAdapter
@@ -19,11 +20,10 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class AvisoActivity : AppCompatActivity() {
-
+class AvisoActivity : AppCompatActivity(){
     private lateinit var apiService: APIService
-    private lateinit var securityPreferences: SecurityPreferences
 
+    private lateinit var securityPreferences: SecurityPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_aviso)
@@ -34,6 +34,11 @@ class AvisoActivity : AppCompatActivity() {
     fun initComponents(){
         securityPreferences = SecurityPreferences(this)
         apiService = APIService(getToken())
+        btnAdicionarAviso.setOnClickListener { view ->
+            val intent = Intent(this, AdicionarAvisoActivity::class.java)
+            this.startActivityForResult(intent, 0)
+            this@AvisoActivity.overridePendingTransition(R.anim.lefttoright, R.anim.stable)
+        }
         getAvisos()
 
     }
@@ -79,22 +84,9 @@ class AvisoActivity : AppCompatActivity() {
         return securityPreferences.getSavedString(CondomaisConstants.KEY.TOKEN_LOGADO)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.activity_add_aviso, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-            when(item!!.itemId){
-                R.id.menu_add_aviso ->
-                    iniciarProximaActivity()
-            }
-
-        return super.onOptionsItemSelected(item)
-    }
-
     private fun iniciarProximaActivity() {
         intent = Intent(this@AvisoActivity, AdicionarAvisoActivity::class.java)
         startActivity(intent)
     }
+
 }

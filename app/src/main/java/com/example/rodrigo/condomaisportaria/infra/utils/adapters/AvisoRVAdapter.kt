@@ -7,19 +7,26 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import com.example.rodrigo.condomaisportaria.R
 import com.example.rodrigo.condomaisportaria.models.Aviso
 
 
 import kotlinx.android.synthetic.main.item_lista_aviso.view.*
+import java.text.FieldPosition
 
 class AvisoRVAdapter(
         var activity: Activity,
         var context: Context,
         var avisos: MutableList<Aviso>
 
+
 ) : RecyclerView.Adapter<AvisoRVAdapter.ViewHolder>(){
+
+    var currentPosition = -1
+
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
@@ -28,8 +35,8 @@ class AvisoRVAdapter(
         var txtDescricao : TextView
 
         init {
-            txtDescricao = itemView.findViewById(R.id.txtDescricaoItemAviso)
-            txtNomeInformante = itemView.findViewById(R.id.txtNomeInformanteIteAviso)
+            txtDescricao = itemView.findViewById(R.id.txtDescricaoAviso)
+            txtNomeInformante = itemView.findViewById(R.id.txtNomeInformanteItemAviso)
             txtPrioridade = itemView.findViewById(R.id.txtPrioridadeItemAviso)
         }
 
@@ -52,10 +59,35 @@ class AvisoRVAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var aviso = avisos.get(position)
+        var slideDown : Animation
+        slideDown = AnimationUtils.loadAnimation(context, R.anim.slide_down);
 
         holder.txtDescricao.text = aviso.descricao
         holder.txtNomeInformante.text = aviso.informante.nome
         holder.txtPrioridade.text = aviso.prioridade
+
+        holder.itemView!!.linearLayout.visibility = View.GONE
+
+
+        if (currentPosition == position) {
+            //creating an animation
+
+
+            //toggling visibility
+            holder.itemView!!.linearLayout.visibility = View.VISIBLE
+            //adding sliding effect
+            holder.itemView.linearLayout.startAnimation(slideDown)
+        }
+
+        holder.itemView.setOnClickListener { view ->
+            currentPosition = position
+
+            notifyDataSetChanged()
+
+
+
+
+        }
     }
 
 

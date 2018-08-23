@@ -58,11 +58,16 @@
             android:parentActivityName=".app.AvisoActivity"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme" />
-        <activity android:name=".app.AdicionarOcorrenciaActivity"
-            android:parentActivityName=".app.OcorrenciaActivity"
+        <activity
+            android:name=".app.AdicionarOcorrenciaActivity"
+            android:parentActivityName=".app.EntradaActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme"
-            />
+            android:theme="@style/AppTheme" />
+        <activity android:name=".app.EntradaExpandidaActivity"
+            android:parentActivityName=".app.EntradaActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+
     </application>
 
 </manifest>
