@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.example.rodrigo.condomaisportaria.R
 import com.example.rodrigo.condomaisportaria.models.Entrada
+import com.example.rodrigo.condomaisportaria.models.Perfil
 import com.example.vinicius.condominium.infra.api.APIService
 import com.example.vinicius.condominium.utils.CondomaisConstants
 import com.example.vinicius.condominium.utils.SecurityPreferences
@@ -67,7 +68,23 @@ class EntradaExpandidaActivity : AppCompatActivity() {
         txtDataEntradaEx.text = "Data: " + entrada.data
         txtHoraEntradaEx.text = "Hora: " + entrada.hora
         txtNomeMoradorEntradaEx.text = "Informante: " + entrada.informante.nome
+        txtBlocoAndApartamentoEntradaEx.text =
+                entrada.informante.unidadeHabitacional.grupoHabitacional.tipo.capitalize()+": " +
+                entrada.informante.unidadeHabitacional.grupoHabitacional.nome + " " +
+                entrada.informante.unidadeHabitacional.grupoHabitacional.tipoUnidade.capitalize()+ ": " +
+                entrada.informante.unidadeHabitacional.nome
+        txtMoradoresEntradaEx.text = getMoradores(entrada.informante.unidadeHabitacional.moradores)
 
+    }
+
+    private fun getMoradores(moradores: MutableList<Perfil>): CharSequence? {
+
+        var moradoresGroup = " "
+        moradores.forEach { morador ->
+
+            moradoresGroup += morador.nome + " " + morador.sobrenome
+        }
+        return moradoresGroup
     }
 
     private fun getToken(): String{
