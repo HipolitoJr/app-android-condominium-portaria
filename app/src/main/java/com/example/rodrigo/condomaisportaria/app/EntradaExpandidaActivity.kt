@@ -32,6 +32,7 @@ class EntradaExpandidaActivity : AppCompatActivity() {
     }
 
     private  fun initConponets(){
+
         securityPreferences = SecurityPreferences(this)
         apiService = APIService(getToken())
         progressDialog = initProgressDialog()
@@ -72,7 +73,6 @@ class EntradaExpandidaActivity : AppCompatActivity() {
     private fun getToken(): String{
         return securityPreferences.getSavedString(CondomaisConstants.KEY.TOKEN_LOGADO)
     }
-
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId){
