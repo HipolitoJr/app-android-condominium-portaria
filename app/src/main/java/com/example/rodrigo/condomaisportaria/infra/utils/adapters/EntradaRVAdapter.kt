@@ -29,14 +29,16 @@ class EntradaRVAdapter (
         var txtData: TextView
         var txtHora: TextView
         var txtNomeVisitante: TextView
-        var btnConfirmarEntrada : ImageView
+        var btnConfirmarEntrada : Button
+        var txtStatusEntrada: TextView
 
         init {
             txtRequerente = itemView.findViewById(R.id.txtRequerente)
             txtData = itemView.findViewById(R.id.txtData)
             txtHora = itemView.findViewById(R.id.txtHora)
             txtNomeVisitante = itemView.findViewById(R.id.txtNomeVisitante)
-            btnConfirmarEntrada = itemView.findViewById(R.id.btnConfirmar)
+            btnConfirmarEntrada = itemView.findViewById(R.id.btnConfirmarEntrada)
+            txtStatusEntrada = itemView.findViewById(R.id.txtStatusItemEntrada)
         }
 
     }
@@ -62,6 +64,7 @@ class EntradaRVAdapter (
             onClick(entrada,view)
         }
 
+        holder.txtStatusEntrada.text = entrada.status
         holder.txtRequerente.text = entrada.informante.nome+" "+entrada.informante.sobrenome
         holder.txtData.text = entrada.data
         holder.txtHora.text = entrada.hora

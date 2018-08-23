@@ -34,7 +34,11 @@ class AvisoActivity : AppCompatActivity(){
     fun initComponents(){
         securityPreferences = SecurityPreferences(this)
         apiService = APIService(getToken())
-        btnAdcionarAviso.setOnClickListener({v -> iniciarProximaActivity()})
+        btnAdicionarAviso.setOnClickListener { view ->
+            val intent = Intent(this, AdicionarAvisoActivity::class.java)
+            this.startActivityForResult(intent, 0)
+            this@AvisoActivity.overridePendingTransition(R.anim.lefttoright, R.anim.stable)
+        }
         getAvisos()
 
     }

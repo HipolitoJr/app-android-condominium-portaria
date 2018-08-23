@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".app.AvisoActivity"
-android:orientation="vertical">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.AvisoActivity"
+    android:orientation="vertical">
 
     <android.support.design.widget.CoordinatorLayout
-        android:layout_weight="4"
+        android:layout_weight="7"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
@@ -19,42 +19,16 @@ android:orientation="vertical">
             android:layout_height="match_parent"/>
 
 
+        <Button
+            android:layout_width="200dp"
+            style="@style/button_style2"
+            android:id="@+id/btnAdicionarAviso"
+            android:layout_gravity="bottom|center"
+            android:text="ADICIONAR AVISO"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
     </android.support.design.widget.CoordinatorLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginEnd="12dp"
-        android:layout_marginStart="12dp">
-
-        <Button
-
-            android:id="@+id/btnEditarAviso"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Editar"/>
-
-        <Button
-
-            android:id="@+id/btnRemoverAviso"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Remover"/>
-
-        <Button
-
-            android:id="@+id/btnAdcionarAviso"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Adicionar"/>
-
-    </LinearLayout>
 
 
 
