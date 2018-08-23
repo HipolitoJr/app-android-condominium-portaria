@@ -96,16 +96,16 @@
                 android:textSize="18sp"
                 android:textColor="@color/draw_description"/>
 
-                <android.support.design.widget.TextInputLayout
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/editEditarDescricao"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <EditText
-                        android:id="@+id/editEditarDescricao"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone"/>
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
 
-                </android.support.design.widget.TextInputLayout>
+            </android.support.design.widget.TextInputLayout>
 
 
         </LinearLayout>
@@ -125,10 +125,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
 
             <Button
                 android:layout_width="100dp"

@@ -43,6 +43,7 @@ class AdicionarAvisoActivity : AppCompatActivity(), OnItemSelectedListener{
 
         spinnerPrioridadeAdicionarAviso!!.setOnItemSelectedListener(this)
         initSpinner()
+        setupView()
 
     }
 
@@ -89,19 +90,6 @@ class AdicionarAvisoActivity : AppCompatActivity(), OnItemSelectedListener{
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when(item!!.itemId){
-            R.id.menu_confirmar_form_aviso ->{
-                postAviso(criarAviso())
-                finish()
-            }
-
-            R.id.menu_cancelar_form_aviso ->
-                finish()
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
     override fun onNothingSelected(p0: AdapterView<*>?) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -110,6 +98,13 @@ class AdicionarAvisoActivity : AppCompatActivity(), OnItemSelectedListener{
         prioridadeSelecionada = prioridade.get(position)
         Toast.makeText(this, prioridade.get(position), Toast.LENGTH_SHORT).show()
 
+    }
+
+    fun setupView(){
+        btnSalvarNovoAviso.setOnClickListener { view ->
+            postAviso(criarAviso())
+            finish()
+        }
     }
 
 

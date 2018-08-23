@@ -8,7 +8,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="2">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/profImg"
@@ -18,14 +20,167 @@
             android:src="@drawable/vini2"
             app:riv_corner_radius="25dp"
             app:riv_oval="true" />
-        <TextView
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text=""/>
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtItemInformanteOcorrencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:textSize="25sp"
+                    android:text="Vinícius Lopes"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/draw_description"
+                    android:layout_marginStart="10dp"
+                    android:textSize="20sp"
+                    android:text="registrou a ocorrência"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtItemDescricaoOcorrencia"
+                        android:layout_marginStart="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Incêndio no Bloco A apartamento 202."
+                        android:textSize="40sp"
+                        android:textColor="@color/draw_description"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/draw_description"
+                            android:text="Status:"/>
+
+                        <TextView
+                            android:id="@+id/txtItemStatusOcorrencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/draw_description"
+                            android:text="Ocorrência aberta" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/draw_description"
+                            android:text="Localização:"/>
+
+                        <TextView
+                            android:id="@+id/txtItemLocalizacaoOcorrencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/draw_description"
+                            android:text="Guarita Superior"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/draw_description"
+                            android:text="Cadastrado em:"/>
+
+                        <TextView
+                            android:id="@+id/txtItemDataOcorrencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/draw_description"
+                            android:text="20 de August"/>
+
+                        <TextView
+                            android:id="@+id/txtItemHoraOcorrencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/draw_description"
+                            android:text="18h:30min"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_ocorrencia_black_24dp"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:gravity="bottom|end"
         android:background="@android:color/darker_gray"
         android:layout_width="match_parent"
