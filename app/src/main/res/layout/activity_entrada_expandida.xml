@@ -1,138 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="3"
     android:background="@color/colorPrimary2"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".app.EntradaExpandidaActivity">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/profImg"
-            android:layout_width="200dp"
+        android:orientation="horizontal"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/profImg"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/personicon"
+                app:riv_corner_radius="25dp"
+                app:riv_oval="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="14dp"
-            android:src="@drawable/personicon"
-            app:riv_corner_radius="25dp"
-            app:riv_oval="true" />
-    </LinearLayout>
+            android:layout_weight="2"
+            android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_info_outline_black_48dp"/>
 
-            <ImageView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Informações da Entrada"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="40sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/colorPrimary"/>
+            <TextView
+                android:id="@+id/txtNomeVisitanteEntradaEx"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_info_outline_black_48dp"/>
+                android:layout_height="wrap_content"
+                android:text="Visitante: José Vinícius Lopes da Silva"
+                android:textColor="@color/draw_description"
+                android:textSize="25sp"/>
+            <TextView
+                android:id="@+id/txtDataEntradaEx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data: 18 de Abril de 2019"
+                android:textColor="@color/draw_description"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:id="@+id/txtHoraEntradaEx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horário: 18h:30min"
+                android:textColor="@color/draw_description"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/txtNomeMoradorEntradaEx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrado por: Hipólito Ribeiro"
+                android:textColor="@color/draw_description"
+                android:textSize="25sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_home_black_48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unidade Habitacional"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="35dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/txtBlocoAndApartamentoEntradaEx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Bloco E - Apartamento 203"
+                android:textColor="@color/draw_description"
+                android:textSize="25dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Informações da Entrada"
-                android:textColor="@color/colorBlack"
-                android:textSize="40sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0.2dp"
-            android:layout_marginBottom="30dp"
-            android:background="@color/colorPrimary"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Visitante: José Vinícius Lopes da Silva"
-            android:textColor="@color/draw_description"
-            android:textSize="25sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Data: 18 de Abril de 2019"
-            android:textColor="@color/draw_description"
-            android:textSize="25dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Horário: 18h:30min"
-            android:textColor="@color/draw_description"
-            android:textSize="25sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Registrado por: Hipólito Ribeiro"
-            android:textColor="@color/draw_description"
-            android:textSize="25sp"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_home_black_48dp"/>
-
+                android:text="Condôminos Associados:"
+                android:textColor="@color/draw_description"
+                android:textSize="25dp"/>
             <TextView
+                android:id="@+id/txtMoradoresEntradaEx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Unidade Habitacional"
-                android:textColor="@color/colorBlack"
-                android:textSize="35dp"
-                />
-
+                android:text="Hipólito Ribeiro, Juliana Martins, Suyanne Cardoso"
+                android:textColor="@color/draw_description"
+                android:textSize="15dp"
+                android:textStyle="italic"/>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0.2dp"
-            android:background="@color/colorPrimary" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Bloco E - Apartamento 203"
-            android:textColor="@color/draw_description"
-            android:textSize="25dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Condôminos Associados:"
-            android:textColor="@color/draw_description"
-            android:textSize="25dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hipólito Ribeiro, Juliana Martins, Suyanne Cardoso"
-            android:textColor="@color/draw_description"
-            android:textSize="15dp"
-            android:textStyle="italic"/>
 
     </LinearLayout>
 
-
-
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            style="@style/button_style2"
+            android:id="@+id/btnConfirmarEntradaExpandida"
+            android:text="CONFIRMAR ENTRADA"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_gravity="center|bottom"/>
 
 </LinearLayout>

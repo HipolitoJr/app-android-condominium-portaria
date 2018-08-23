@@ -15,6 +15,7 @@ import android.widget.TextView
 import com.example.rodrigo.condomaisportaria.R
 import com.example.rodrigo.condomaisportaria.app.EntradaExpandidaActivity
 import com.example.rodrigo.condomaisportaria.models.Entrada
+import com.example.vinicius.condominium.utils.CondomaisConstants
 import kotlinx.android.synthetic.main.item_lista_entrada.view.*
 
 class EntradaRVAdapter (
@@ -31,6 +32,7 @@ class EntradaRVAdapter (
         var txtNomeVisitante: TextView
         var btnConfirmarEntrada : Button
         var txtStatusEntrada: TextView
+
 
         init {
             txtRequerente = itemView.findViewById(R.id.txtRequerente)
@@ -60,29 +62,25 @@ class EntradaRVAdapter (
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var entrada = entradas.get(position)
 
-        holder.itemView.setOnClickListener { view ->
-            onClick(entrada,view)
-        }
-
         holder.txtStatusEntrada.text = entrada.status
         holder.txtRequerente.text = entrada.informante.nome+" "+entrada.informante.sobrenome
         holder.txtData.text = entrada.data
         holder.txtHora.text = entrada.hora
         holder.txtNomeVisitante.text = entrada.descricao
+
         holder.btnConfirmarEntrada.setOnClickListener{view ->
                 entrada.validarEntrada()
         }
 
+        holder.itemView.setOnClickListener { view ->
+            val intent = Intent(activity,EntradaExpandidaActivity::class.java)
+            intent.putExtra(CondomaisConstants.KEY.ENRADA_ID, entrada.id)
+            activity.startActivityForResult(intent,0)
+            activity.overridePendingTransition(R.anim.lefttoright,R.anim.stable)
+        }
+
 
     }
-
-    fun onClick(entrada: Entrada,view: View){
-        val intent = Intent(activity,EntradaExpandidaActivity::class.java)
-        activity.startActivityForResult(intent,0)
-        activity.overridePendingTransition(R.anim.lefttoright,R.anim.stable)
-    }
-
-
 
 }
 
