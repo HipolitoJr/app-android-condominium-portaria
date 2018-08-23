@@ -102,7 +102,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_weight="6"
         android:orientation="horizontal">
 
@@ -119,7 +119,7 @@
             <Button
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                style="@style/button_style2"
+                style="@style/button_style3"
                 android:id="@+id/btnExcluirAviso"
                 android:text="EXCLUIR"
                 android:clickable="true"
@@ -128,7 +128,7 @@
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 style="@style/button_style2"
-                android:id="@+id/btnSalvar"
+                android:id="@+id/btnSalvarAviso"
                 android:text="SALVAR"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"/>
